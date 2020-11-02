@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/v1/user/create','UsersController@create_account');
+Route::post('/v1/user/delete','UsersController@delete_account');
+Route::post('/v1/user/pwd/change','UsersController@update_password');
+Route::post('/v1/user/login','UsersController@validate_login');
